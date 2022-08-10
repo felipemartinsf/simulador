@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMULADOR</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    h1{
+        margin: auto;
+        text-align: center;
+        color: red;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    div#foto{
+        margin:auto;
+        text-align: center;
+    }
+
+    div#caveira{
+        margin: auto;
+        text-align: center;
+        margin-right: 960px;
+        cursor: pointer;
+        display: none;
+    }
+    div#botao{
+        margin: auto;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    div#botao{
+        margin: auto;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    div#botaoi1{
+        display: none;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: left;
+        font-weight: bold;
+        margin-left: 360px;
+
+    }
+    div#botaoi2{
+        display: none;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: right;
+        margin-right: 360px;
+        font-weight: bold;
+    }
+    div#botaoi3{
+        display: none;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: left;
+        margin-top: 70px;
+        margin-left: 360px;
+        font-weight: bold;
+    }
+    div#botaoi4{
+        display: none;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: right;
+        margin-top: 70px;
+        margin-right: 360px;
+        font-weight: bold;
+    }
+    div#botaof1{
+        display: none;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: left;
+        font-weight: bold;
+        margin-left: 360px;
+
+    }
+    div#botaof2{
+        display: none;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: right;
+        margin-right: 360px;
+        font-weight: bold;
+    }
+    div#botaof3{
+        display: none;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: left;
+        margin-top: 70px;
+        margin-left: 360px;
+        font-weight: bold;
+    }
+    div#botaof4{
+        display: none;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: right;
+        margin-top: 70px;
+        margin-right: 360px;
+        font-weight: bold;
+    }
+    div#botaoff1{
+        display: none;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: left;
+        font-weight: bold;
+        margin-left: 360px;
+
+    }
+    div#botaoff2{
+        display: none;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: right;
+        margin-right: 360px;
+        font-weight: bold;
+    }
+    div#botaoff3{
+        display: none;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: left;
+        margin-top: 70px;
+        margin-left: 360px;
+        font-weight: bold;
+    }
+    div#botaoff4{
+        display: none;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: right;
+        margin-top: 70px;
+        margin-right: 360px;
+        font-weight: bold;
+    }
+    div#botaoff4{
+        display: none;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: right;
+        margin-top: 70px;
+        margin-right: 360px;
+        font-weight: bold;
+    }
+    div#botaot1{
+        display: none;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: right;
+        margin-top: 70px;
+        margin-right: 360px;
+        font-weight: bold;
+    }
+
+    div#botaos{
+        display: none;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: right;
+        margin-top: 70px;
+        margin-right: 360px;
+        font-weight: bold;
+    }
+
+    div#botaon{
+        display: none;
+        text-align: center;
+        color: white;
+        background-color: red;
+        padding: 15px;
+        padding-left: 30px;
+        width: 250px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: right;
+        margin-top: 70px;
+        margin-right: 360px;
+        font-weight: bold;
+    }
+    div#fim{
+        display: none;
+        margin: auto;
+        text-align: center;
+        color: rgb(255, 0, 0);
+        padding: 15px;
+        width: 250px;
+        border-radius: 10px;
+    }
+    footer#cred{
+        color:white;
+        text-align:center;
+        padding-top: 200px;
+    }
+    footer#text1{
+        color:white;
+        text-align:center;
+        padding-top: 100px;
+        display: none;
+    }
+    footer#paranoia{
+        color:white;
+        text-align:center;
+        padding-top: 100px;
+        display: none;
+    }
+    footer#text2{
+        color:white;
+        text-align:center;
+        padding-top: 100px;
+        display: none;
+    }
+    footer#text3{
+        color:white;
+        text-align:center;
+        padding-top: 100px;
+        display: none;
+    }
+
+    footer#text4{
+        color:white;
+        text-align:center;
+        padding-top: 100px;
+        display: none;
+    }
+
+    footer#text5{
+        color:white;
+        text-align:center;
+        padding-top: 100px;
+        display: none;
+        margin-top: 70px;
+        margin-left: 20px;
+    }
+
+    footer#text6{
+        color:rgb(255, 255, 255);
+        text-align:center;
+        padding-top: 100px;
+        display: none;
+        margin-top: 70px;
+        margin-left: 20px;
+    }
+
+    footer#text7{
+        color:rgb(255, 255, 255);
+        text-align:center;
+        padding-top: 100px;
+        display: none;
+        margin-top: 70px;
+        margin-left: 20px;
+    }
+
+    footer#good{
+        color:rgb(196, 22, 22);
+        text-align:center;
+        padding-top: 100px;
+        display: none;
+        margin-top: 70px;
+        margin-left: 20px;
+    }
+
+</style>
+<body id="coco">
+    <h1 id ='titulo'>SIMULADOR DE PEGAR O DENIS</h1>
+    <div id="foto"><img src="inicial.jpeg" height="500" width="500"></div>
+    <div id="botao" onmouseenter="entra()" onmouseout="sai()" onclick="clica()">COMEÇAR</div>
+    <div id="botaoi1" onmouseenter="entrai1()" onmouseout="saii1()" onclick="clicai1()">Elogiar sua beleza</div>
+    <div id="botaoi2" onmouseenter="entrai2()" onmouseout="saii2()" onclick="clicai2()">Citar que conhece sua ex</div>
+    <div id="botaoi3" onmouseenter="entrai3()" onmouseout="saii3()" onclick="clicai3()">Rir de suas piadas</div>
+    <div id="botaoi4" onmouseenter="entrai4()" onmouseout="saii4()" onclick="clicai4()">Acusá-lo de um crime</div>
+    <div id="botaof1" onmouseenter="entraf1()" onmouseout="saif1()" onclick="clicaf1()">Kairos bar</div>
+    <div id="botaof2" onmouseenter="entraf2()" onmouseout="saif2()" onclick="clicaf2()">Um beco</div>
+    <div id="botaof3" onmouseenter="entraf3()" onmouseout="saif3()" onclick="clicaf3()">sorveteria</div>
+    <div id="botaof4" onmouseenter="entraf4()" onmouseout="saif4()" onclick="clicaf4()">Transilvânia</div>
+    <div id="botaoff1" onmouseenter="entraff1()" onmouseout="saiff1()" onclick="clicaff1()">Admitir que é a bia cordeiro</div>
+    <div id="botaoff2" onmouseenter="entraff2()" onmouseout="saiff2()" onclick="clicaff2()">Elogiar o rock</div>
+    <div id="botaoff3" onmouseenter="entraff3()" onmouseout="saiff3()" onclick="clicaff3()">Ser meio ruim da cabeça</div>
+    <div id="botaoff4" onmouseenter="entraff4()" onmouseout="saiff4()" onclick="clicaff4()">falar eu te amo</div>
+    <div id="botaot1" onmouseenter="entrat1()" onmouseout="sait1()" onclick="fasef()">PRÓXIMO</div>
+    <div id="botaos" onmouseenter="entrafinal1()" onmouseout="saifinal1()" onclick="endgame()">SIM</div>
+    <div id="botaon" onmouseenter="entrafinal2()" onmouseout="saifinal2()" onclick="perdi()">NAO</div>
+    <div id="caveira" onclick="secreto()"><img src="caveira.jpg" height="30" width="30"></div>
+    <div id='fim'><strong>GAME OVER</strong></div> <!-- sempre o ultimo -->
+    <footer id="text1"><strong>Você encontra Denis Scarafiz no corleone: tome sua decisão</strong></footer>
+    <footer id="text2"><strong>Ele gostou de voce... escolha um local para um encontro</strong></footer>
+    <footer id="text3"><strong>oque vc fará nesse encontro mravilhoso</strong></footer>
+    <footer id="text4"><strong>voce foi pra cama com o denis</strong></footer>
+    <footer id="text5"><strong>ele te pediu em namoro depois de 2 semanas oque faz?</strong></footer>
+    <footer id="text6"><strong>PARABENS O JOGO ACABOU VCS ESTÃO FELIZES PARA SEMPRE</strong></footer>
+    <footer id="text7"><strong>você matou o denis no beco hahahahahahaha</strong></footer>
+    <footer id="good"><strong>GOOD ENDING</strong></footer>
+    <footer id="paranoia"><strong>denis scarafiz esta pra sempre traumatizado nunca mais vai dormir parabens</strong></footer>
+    <footer id="cred"><strong>créditos: felipemartinsf_</strong></footer>
+    <script>
+        const valor = 18
+const valorf = 7
+function perdi(){
+    var img = document.getElementById('foto')
+    img.innerHTML = '<img src="triste.jpeg" height="400" width="300">'
+    var i 
+    for(i=0;i<=valorf-2;i++){
+        var c = document.getElementsByTagName('footer')[i]
+        c.style.display = 'none'
+    }
+    for(i=1;i<valor;i++){
+        var a = document.getElementsByTagName('div')[i]
+        a.style.display = 'none'
+    }
+    var d = document.getElementsByTagName('div')[valor]
+        d.style.display = 'block'
+        for(i=valorf-1;i<=valorf;i++){
+            var a = document.getElementsByTagName('footer')[i]
+            a.style.display = 'block'
+        }
+}
+function fase2(){
+    var img = document.getElementById('foto')
+    img.innerHTML = '<img src="date.jpeg" height="400" width="300">'
+    var b = document.getElementById('text1')
+    b.style.display = 'none'
+    var i 
+    for(i=1;i<valor-1;i++){
+        var a = document.getElementsByTagName('div')[i]
+        a.style.display = 'none'
+    }
+    for (i=6;i<=9;i++){
+        var d = document.getElementsByTagName('div')[i]
+        d.style.display ='block'
+
+    }
+    var c = document.getElementById('text2')
+    c.style.display = 'block'
+
+}
+function fase3(){
+    var img = document.getElementById('foto')
+    img.innerHTML = '<img src="la dentro do encontro.jpg" height="400" width="300">'
+    var i
+    for(i=0;i<=valorf-2;i++){
+        var c = document.getElementsByTagName('footer')[i]
+    c.style.display = 'none'
+    }
+    for(i=1;i<valor-1;i++){
+        var a = document.getElementsByTagName('div')[i]
+        a.style.display = 'none'
+    }
+    for (i=10;i<=13;i++){
+        var d = document.getElementsByTagName('div')[i]
+        d.style.display ='block'
+
+    }
+    var c = document.getElementById('text3')
+    c.style.display = 'block'
+
+}
+
+function fase4(){
+    var img = document.getElementById('foto')
+    img.innerHTML = '<img src="sexo.jpeg" height="400" width="300">'
+    for(i=0;i<=valorf-2;i++){
+        var c = document.getElementsByTagName('footer')[i]
+    c.style.display = 'none'
+    }
+    for(i=1;i<valor;i++){
+        var a = document.getElementsByTagName('div')[i]
+        a.style.display = 'none'
+    }
+    var c = document.getElementById('botaot1')
+    c.style.display = 'block'
+    var c = document.getElementById('text4')
+    c.style.display = 'block'
+}
+
+function fasef(){
+    var img = document.getElementById('foto')
+    img.innerHTML = '<img src="namoro.jpeg" height="400" width="300">'
+
+    var a = document.getElementById('botaos')
+    a.style.display = 'block'
+
+    var a1 = document.getElementById('botaon')
+    a1.style.display = 'block'
+
+    var b = document.getElementById('botaot1')
+    b.style.display = 'none'
+
+    var c = document.getElementById('text5')
+    c.style.display = 'block'
+
+    var d = document.getElementById('text4')
+    d.style.display = 'none'
+
+
+}
+
+function endgame(){
+    var img = document.getElementById('foto')
+    img.innerHTML = '<img src="fim.jpeg" height="400" width="300">'
+
+    var a = document.getElementById('botaos')
+    a.style.display = 'none'
+
+    var a1 = document.getElementById('botaon')
+    a1.style.display = 'none'
+
+    var c = document.getElementById('text5')
+    c.style.display = 'none'
+
+    var e = document.getElementById('titulo')
+    e.style.color = 'green'
+
+    var c = document.getElementById('text6')
+    c.style.display = 'block'
+
+    var c = document.getElementById('cred')
+    c.style.display = 'block'
+}
+
+function secreto(){
+    var img = document.getElementById('foto')
+    img.innerHTML = '<img src="morte.jpeg" height="400" width="300">'
+
+    var c = document.getElementById('good')
+    c.style.display = 'block'
+
+    var d = document.getElementById('text7')
+    d.style.display = 'block'
+
+    var e = document.getElementById('text3')
+    e.style.display = 'none'
+
+    for(i=1;i<valor;i++){
+        var a = document.getElementsByTagName('div')[i]
+        a.style.display = 'none'
+    }
+}
+
+function entra(){
+    var a = document.getElementById('botao')
+    a.style.backgroundColor = 'blue'
+}
+function entrai1(){
+    var a = document.getElementById('botaoi1')
+    a.style.backgroundColor = 'blue'
+    }
+function saii1(){
+        var a = document.getElementById('botaoi1')
+    a.style.backgroundColor = 'red'
+    
+}
+
+function entrai2(){
+    var a = document.getElementById('botaoi2')
+    a.style.backgroundColor = 'blue'
+}
+
+function saii2(){
+    var a = document.getElementById('botaoi2')
+    a.style.backgroundColor = 'red'
+}
+
+function entrai3(){
+    var a = document.getElementById('botaoi3')
+    a.style.backgroundColor = 'blue'
+}
+
+function saii3(){
+    var a = document.getElementById('botaoi3')
+    a.style.backgroundColor = 'red'
+}
+
+function entrai4(){
+    var a = document.getElementById('botaoi4')
+    a.style.backgroundColor = 'blue'
+}
+
+function saii4(){
+    var a = document.getElementById('botaoi4')
+    a.style.backgroundColor = 'red'
+}
+
+function entraf1(){
+    var a = document.getElementById('botaof1')
+    a.style.backgroundColor = 'blue'
+    }
+function saif1(){
+        var a = document.getElementById('botaof1')
+        a.style.backgroundColor = 'red'
+    
+}
+
+function entraf2(){
+    var a = document.getElementById('botaof2')
+    a.style.backgroundColor = 'blue'
+}
+
+function saif2(){
+    var a = document.getElementById('botaof2')
+    a.style.backgroundColor = 'red'
+}
+
+function entraf3(){
+    var a = document.getElementById('botaof3')
+    a.style.backgroundColor = 'blue'
+}
+
+function saif3(){
+    var a = document.getElementById('botaof3')
+    a.style.backgroundColor = 'red'
+}
+
+function entraf4(){
+    var a = document.getElementById('botaof4')
+    a.style.backgroundColor = 'blue'
+}
+
+function saif4(){
+    var a = document.getElementById('botaof4')
+    a.style.backgroundColor = 'red'
+}
+
+function entraff1(){
+    var a = document.getElementById('botaoff1')
+    a.style.backgroundColor = 'blue'
+    }
+function saiff1(){
+        var a = document.getElementById('botaoff1')
+        a.style.backgroundColor = 'red'
+    
+}
+
+function entraff2(){
+    var a = document.getElementById('botaoff2')
+    a.style.backgroundColor = 'blue'
+}
+
+function saiff2(){
+    var a = document.getElementById('botaoff2')
+    a.style.backgroundColor = 'red'
+}
+
+function entraff3(){
+    var a = document.getElementById('botaoff3')
+    a.style.backgroundColor = 'blue'
+}
+
+function saiff3(){
+    var a = document.getElementById('botaoff3')
+    a.style.backgroundColor = 'red'
+}
+
+function entraff4(){
+    var a = document.getElementById('botaoff4')
+    a.style.backgroundColor = 'blue'
+}
+
+function saiff4(){
+    var a = document.getElementById('botaoff4')
+    a.style.backgroundColor = 'red'
+}
+function entrat1(){
+    var a = document.getElementById('botaot1')
+    a.style.backgroundColor = 'blue'
+}
+
+function sait1(){
+    var a = document.getElementById('botaot1')
+    a.style.backgroundColor = 'red'
+}
+
+function entrafinal1(){
+    var a = document.getElementById('botaos')
+    a.style.backgroundColor = 'green'
+}
+
+function saifinal1(){
+    var a = document.getElementById('botaos')
+    a.style.backgroundColor = 'red'
+}
+
+function entrafinal2(){
+    var a = document.getElementById('botaon')
+    a.style.backgroundColor = 'blue'
+}
+
+function saifinal2(){
+    var a = document.getElementById('botaon')
+    a.style.backgroundColor = 'red'
+}
+
+function sai(){
+    var a = document.getElementById('botao')
+    a.style.backgroundColor = 'red'
+}
+function clicai1(){
+    fase2()
+}
+function clicai2(){
+    perdi()
+}
+function clicai3(){
+    fase2()
+}
+function clicai4(){
+   perdi()
+    
+}
+
+function clicaf1(){
+    perdi()
+}
+function clicaf2(){
+    var img = document.getElementById('foto')
+    img.innerHTML = '<img src="beco.jpeg" height="400" width="300">'
+    var i
+    for(i=0;i<=valorf-2;i++){
+        var c = document.getElementsByTagName('footer')[i]
+    c.style.display = 'none'
+    }
+    for(i=1;i<valor-1;i++){
+        var a = document.getElementsByTagName('div')[i]
+        a.style.display = 'none'
+    }
+    for (i=10;i<=13;i++){
+        var d = document.getElementsByTagName('div')[i]
+        d.style.display ='block'
+
+    }
+    var c = document.getElementById('text3')
+    c.style.display = 'block'
+
+    var c = document.getElementById('caveira')
+    c.style.display = 'block'
+}
+function clicaf3(){
+    fase3()
+    
+}
+function clicaf4(){
+   fase3()
+   
+    
+}
+
+function clicaff1(){
+    perdi()
+}
+function clicaff2(){
+    fase4()
+    
+}
+function clicaff3(){
+    fase4()
+    
+}
+function clicaff4(){
+   perdi()
+   
+    
+}
+
+
+function clica(){
+    var i
+    for (i=2;i<=5;i++){
+        var d = document.getElementsByTagName('div')[i]
+        d.style.display ='block'
+
+    }
+    var c = document.getElementById('text1')
+    c.style.display = 'block'
+    var b = document.getElementById('cred')
+    b.style.display = 'none'
+    var a = document.getElementById('botao')
+    a.style.display = 'none'
+    var img = document.getElementById('foto')
+    img.innerHTML = '<img src="primeira.jpeg" height="400" width="300">'
+}
+
+    </script>
+</body>
+</html>
